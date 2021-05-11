@@ -3,12 +3,44 @@
     width: 30%;
     background-color: brown;
     cursor: pointer;
+    background-image: url("../img/card-pattern_white.png");
+    background-size: cover;
 }
 
 .card.false {
     background-color: crimson;
 }
 
+.card.key0.false {
+    background-image: url( "../img/dune-nili-patera.jpg")
+}
+.card.key1.false {
+    background-image: url( "../img/formations.jpg")
+}
+.card.key2.false {
+    background-image: url( "../img/layers-danielson-crater.jpg")
+}
+.card.key3.false {
+    background-image: url( "../img/martian-boulder-piles.jpg")
+}
+.card.key4.false {
+    background-image: url( "../img/roddy-crater.jpg")
+}
+.card.key5.false {
+    background-image: url( "../img/snowy-dunes.jpg")
+}
+.card.key6.false {
+    background-image: url( "../img/south-polar-deposits.jpg")
+}
+.card.key7.false {
+    background-image: url( "../img/south-polar-pit.jpg")
+}
+.card.key8.false {
+    background-image: url( "../img/hellas-planitia.jpg")
+}
+
+
 .card.true {
     background-color: green;
+    background-image: url("../img/mars-rover.svg") !important;
 }
