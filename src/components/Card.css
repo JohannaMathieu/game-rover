@@ -1,0 +1,14 @@
+.card {
+    height: 30%;
+    width: 30%;
+    background-color: brown;
+    cursor: pointer;
+}
+
+.card.false {
+    background-color: crimson;
+}
+
+.card.true {
+    background-color: green;
+}
