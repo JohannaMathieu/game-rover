@@ -3,7 +3,6 @@ import { useState, useEffect} from 'react';
 import Onboarding from "./components/Onboarding";
 import CardList from "./components/CardList"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import axios from 'axios'
 
 
 
@@ -33,7 +32,7 @@ function App() {
   }, [])
 
 
-  console.log(data)
+  //console.log(data)
 
 
   return (

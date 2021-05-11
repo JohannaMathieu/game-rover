@@ -1,9 +1,21 @@
 import React from 'react'
 import "./Card.css"
 
-const Card = () => {
+const Card = ({hidingPlace}) => {
+
+    const onClick = (e) => {
+        if (hidingPlace==true) {
+            console.log("you found me");
+            e.target.className = "card true"
+        }
+        else {
+            console.log("Nope, try again");
+            e.target.className = "card false"
+        }
+    }
+
     return (
-        <div>
+        <div className="card" onClick={onClick}>
             <img></img>
             
         </div>
