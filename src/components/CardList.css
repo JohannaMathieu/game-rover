@@ -1,8 +1,8 @@
 .cards-list {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    width: 80vh;
-    height: 80vh;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 60vw;
+  height: 60vw;
+  flex-wrap: wrap;
 }
