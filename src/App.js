@@ -1,48 +1,55 @@
-import './App.css';
-import { useState, useEffect} from 'react';
+import "./App.css";
+import { useState, useEffect } from "react";
 import Onboarding from "./components/Onboarding";
-import CardList from "./components/CardList"
+import CardList from "./components/CardList";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
-
-
+import axios from "axios";
 
 // https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=3000&PANCAM&page=1&api_key=yyjak0ojMEER3TBGfBUCWH2OiMijbsmwos54Xrt4
 
-
-
-
-
-  
- 
-
-
 function App() {
-
-  const [data, setData] = useState([])
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=2000&PANCAM&page=1&api_key=yyjak0ojMEER3TBGfBUCWH2OiMijbsmwos54Xrt4')
-      .then(response => response.json())
-      .then(data => {
-        setData(data)
-        
-      })
-  
-  }, [])
+    fetch(
+      "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=2000&PANCAM&page=1&api_key=yyjak0ojMEER3TBGfBUCWH2OiMijbsmwos54Xrt4"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+      });
+  }, []);
 
+  const [chuck, setChuck] = useState([]);
+
+  useEffect(() => {
+    var instance = axios.create({
+      baseURL: "https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com",
+    });
+    instance.defaults.headers.common["x-rapidapi-key"] =
+      "94aebcf4afmsha42e3bb3f8da45dp11ac41jsncd2b74ed5531";
+    instance
+      .get("/jokes/random")
+      .then(function (response) {
+        console.log(response);
+        setChuck(response.data.value);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, []);
+  console.log(chuck);
 
   //console.log(data)
-
 
   return (
     <div className="App">
       <Router>
-        <Switch >
+        <Switch>
           <Route exact path="/">
             <Onboarding />
           </Route>
-          <Route path="/game" >
+          <Route path="/game">
             <CardList />
           </Route>
         </Switch>

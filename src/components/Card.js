@@ -23,26 +23,6 @@ const Card = ({ hidingPlace, url, key, classNew }) => {
     console.log(classNew);
   }, []);
 
-  const [chuck, setChuck] = useState([]);
-
-  useEffect(() => {
-    var instance = axios.create({
-      baseURL: "https://matchilling-chuck-norris-jokes-v1.p.rapidapi.com",
-    });
-    instance.defaults.headers.common["x-rapidapi-key"] =
-      "94aebcf4afmsha42e3bb3f8da45dp11ac41jsncd2b74ed5531";
-    instance
-      .get("/jokes/random")
-      .then(function (response) {
-        console.log(response);
-        setChuck(response.data.value);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }, []);
-  console.log(chuck);
-
   return (
     <div className={myClass} onClick={onClick}>
       <img></img>
