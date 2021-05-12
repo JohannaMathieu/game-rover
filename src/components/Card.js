@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./Card.css";
-import axios from "axios";
 
 const Card = ({ hidingPlace, url, key, classNew }) => {
   console.log(key);
