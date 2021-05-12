@@ -9,7 +9,7 @@ const Onboarding = () => {
         We are so bored!<br></br>Will you play with us?!
       </h1>
       <button>
-        <Link to="/game">Take me to game</Link>
+        <Link to="/game">Yes! Let's play!</Link>
       </button>
     </div>
   );
