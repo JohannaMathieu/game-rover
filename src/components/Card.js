@@ -13,7 +13,11 @@ console.log(key);
         if (hidingPlace==true) {
             console.log("you found me");
             e.target.className = `${myClass} true`;
-            history.push('/win');
+            setTimeout(function(){
+                history.push('/win');
+
+            }, 600); 
+           
 
    
             
