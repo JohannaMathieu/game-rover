@@ -11,17 +11,7 @@ import Chuck from "./components/Chuck";
 // https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=3000&PANCAM&page=1&api_key=yyjak0ojMEER3TBGfBUCWH2OiMijbsmwos54Xrt4
 
 function App() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetch(
-      "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=2000&PANCAM&page=1&api_key=yyjak0ojMEER3TBGfBUCWH2OiMijbsmwos54Xrt4"
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data);
-      });
-  }, []);
+  
 
   const [chuck, setChuck] = useState([]);
 

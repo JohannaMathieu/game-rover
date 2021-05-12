@@ -1,6 +1,6 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import "./Card.css"
-import { BrowserRouter as Router, Switch, Route, Link, useHistory } from "react-router-dom"
+import { useHistory } from "react-router-dom"
 
 const Card = ({hidingPlace, url, key, classNew}) => {
     let history = useHistory()
@@ -8,7 +8,7 @@ const Card = ({hidingPlace, url, key, classNew}) => {
     console.log(key);
 
     const onClick = (e) => {
-        if (hidingPlace==true) {
+        if (hidingPlace===true) {
             console.log("you found me");
             e.target.className = `${myClass} true`;
             setTimeout(function(){
@@ -23,17 +23,13 @@ const Card = ({hidingPlace, url, key, classNew}) => {
     };
  
 
-    let imgUrl = `url(${url})`;
 
     const myClass = `card key${classNew}`;
 
-    useEffect(() => {
-        console.log(classNew);
-    }, []);
+
 
     return (
       <div className={myClass} onClick={onClick}>
-        <img></img>
       </div>
     );
 };
