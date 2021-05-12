@@ -1,5 +1,35 @@
 .chuckstyle {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: space-between;
+  align-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 60vw;
+}
+
+.chuckjoke {
+  /* padding-top: 120px; */
+  color: rgb(226, 201, 139);
+  background-color: #5a2017a5;
+  padding: 20px;
+  margin: 150px 0px;
+  font-size: 25px;
+}
+/* .chuckjoke {
+  margin-top: 200px;
+  width: 230px;
+  align-self: center;
+  height: 50px;
+  margin-left: 150px;
+  color: aqua;
+} */
+
+.chuckstyle button {
+  margin: 80px 0px;
+  width: fit-content;
+}
+
+.chuckstyle a {
+  font-size: 20px;
 }
