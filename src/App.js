@@ -4,6 +4,7 @@ import Onboarding from "./components/Onboarding";
 import CardList from "./components/CardList";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import axios from "axios";
+import Chuck from "./components/Chuck";
 
 // https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=3000&PANCAM&page=1&api_key=yyjak0ojMEER3TBGfBUCWH2OiMijbsmwos54Xrt4
 
@@ -51,6 +52,9 @@ function App() {
           </Route>
           <Route path="/game">
             <CardList />
+          </Route>
+          <Route path="/chuck">
+            <Chuck quote={chuck} />
           </Route>
         </Switch>
       </Router>
