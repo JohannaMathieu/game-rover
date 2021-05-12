@@ -22,17 +22,17 @@ console.log(key);
             console.log("Nope, try again");
             e.target.className = `${myClass} false`
         }
+
     }
+  };
 
-    let imgUrl = `url(${url})`
+  let imgUrl = `url(${url})`;
 
-    const myClass = `card key${classNew}`
+  const myClass = `card key${classNew}`;
 
-    useEffect(() => {
-        console.log(classNew);
-       
-    }, [])
-
+  useEffect(() => {
+    console.log(classNew);
+  }, []);
 
     return (
         <div className={myClass} onClick={onClick}  >
@@ -42,4 +42,5 @@ console.log(key);
     )
 }
 
-export default Card
+
+export default Card;
