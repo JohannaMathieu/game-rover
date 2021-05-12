@@ -1,42 +1,41 @@
-import React, { useEffect } from "react";
-import "./Card.css";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useHistory,
-} from "react-router-dom";
+import React, {useEffect} from 'react'
+import "./Card.css"
+import { BrowserRouter as Router, Switch, Route, Link, useHistory } from "react-router-dom"
 
-const Card = ({ hidingPlace, url, key, classNew }) => {
-  let history = useHistory();
+const Card = ({hidingPlace, url, key, classNew}) => {
+    let history = useHistory()
 
-  console.log(key);
+    console.log(key);
 
-  const onClick = (e) => {
-    if (hidingPlace == true) {
-      console.log("you found me");
-      e.target.className = `${myClass} true`;
-      history.push("/win");
-    } else {
-      console.log("Nope, try again");
-      e.target.className = `${myClass} false`;
-    }
-  };
+    const onClick = (e) => {
+        if (hidingPlace==true) {
+            console.log("you found me");
+            e.target.className = `${myClass} true`;
+            setTimeout(function(){
+                history.push('/win');
 
-  let imgUrl = `url(${url})`;
+            }, 600);             
+        }
+        else {
+            console.log("Nope, try again");
+            e.target.className = `${myClass} false`
+        }
+    };
+ 
 
-  const myClass = `card key${classNew}`;
+    let imgUrl = `url(${url})`;
 
-  useEffect(() => {
-    console.log(classNew);
-  }, []);
+    const myClass = `card key${classNew}`;
 
-  return (
-    <div className={myClass} onClick={onClick}>
-      <img></img>
-    </div>
-  );
+    useEffect(() => {
+        console.log(classNew);
+    }, []);
+
+    return (
+      <div className={myClass} onClick={onClick}>
+        <img></img>
+      </div>
+    );
 };
 
 export default Card;
