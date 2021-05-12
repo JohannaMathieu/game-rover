@@ -5,9 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link, useHistory } from "react-
 const Card = ({hidingPlace, url, key, classNew}) => {
     let history = useHistory()
 
-console.log(key);
-
-
+    console.log(key);
 
     const onClick = (e) => {
         if (hidingPlace==true) {
@@ -16,34 +14,28 @@ console.log(key);
             setTimeout(function(){
                 history.push('/win');
 
-            }, 600); 
-           
-
-   
-            
+            }, 600);             
         }
         else {
             console.log("Nope, try again");
             e.target.className = `${myClass} false`
         }
-    }
+    };
+ 
 
-    let imgUrl = `url(${url})`
+    let imgUrl = `url(${url})`;
 
-    const myClass = `card key${classNew}`
+    const myClass = `card key${classNew}`;
 
     useEffect(() => {
         console.log(classNew);
-       
-    }, [])
-
+    }, []);
 
     return (
-        <div className={myClass} onClick={onClick}  >
-            <img></img>
-            
-        </div>
-    )
-}
+      <div className={myClass} onClick={onClick}>
+        <img></img>
+      </div>
+    );
+};
 
-export default Card
+export default Card;
