@@ -1,9 +1,8 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import Onboarding from "./components/Onboarding";
-
-import CardList from "./components/CardList"
-import Win from "./components/Win"
+import axios from "axios";
+import CardList from "./components/CardList";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -59,9 +58,8 @@ function App() {
           <Route path="/chuck">
             <Chuck quote={chuck} />
           </Route>
-          <Route path="/win" >
-            <Win />  
-
+          <Route path="/win">
+            <Chuck quote={chuck} />
           </Route>
         </Switch>
       </Router>
